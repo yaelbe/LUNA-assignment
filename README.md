@@ -20,7 +20,7 @@ After completing this condition, the next button that starts the test is
 enabled. While waiting for face detection, if the user moves the device and
 it is not at the required angle, the first instruction should appear again.
 
-
+## what is inside?
 This code is written in Swift and uses the SwiftUI framework. It consists of several classes and structs that work together to create a setup guide app for a refraction exam. Here is a code review of the provided code:
 
 AppCoordinator: This class is responsible for coordinating the setup process. It manages the state of whether the setup has started or not (isSetupStarted) and contains instances of PhonePositionViewModel and FaceDetectionViewModel.
