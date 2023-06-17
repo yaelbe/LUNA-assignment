@@ -19,3 +19,16 @@ The instruction is displayed to the user until a face detection is received.
 After completing this condition, the next button that starts the test is
 enabled. While waiting for face detection, if the user moves the device and
 it is not at the required angle, the first instruction should appear again.
+
+
+This code is written in Swift and uses the SwiftUI framework. It consists of several classes and structs that work together to create a setup guide app for a refraction exam. Here is a code review of the provided code:
+
+AppCoordinator: This class is responsible for coordinating the setup process. It manages the state of whether the setup has started or not (isSetupStarted) and contains instances of PhonePositionViewModel and FaceDetectionViewModel.
+
+PhonePositionViewModel: This class handles the phone position check using the device's motion data. It tracks the current angle of the device (currentAngle) and whether the phone is positioned correctly (isPhonePositionedCorrectly). It starts device motion updates and updates the state based on the pitch angle of the device.
+
+FaceDetectionViewModel: This class handles face detection using the device's camera. It uses AVCaptureSession to capture video frames and performs face detection using the Vision framework. It updates the state based on whether a face is detected (isFaceDetected).
+
+ContentView: This SwiftUI view is the main user interface of the app. It displays instructions and feedback based on the setup process and provides a button to start/stop the setup. It also observes the state changes in AppCoordinator and the view models to update the UI.
+
+Overall, the code looks well-structured and follows the MVVM (Model-View-ViewModel) architectural pattern. The use of Combine framework publishers (@Published, sink, AnyCancellable) allows for reactive updates of the UI based on state changes. The code handles camera permissions, motion updates, and face detection appropriately.
