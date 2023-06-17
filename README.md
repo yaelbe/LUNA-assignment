@@ -1,5 +1,6 @@
 # LUNA-assignment
 
+## The requirement 
 The goal of this assignment is to create an interactive setup guide for our
 cool refraction exam app! 🤓
 To obtain accurate results, the user must position his phone vertically in a
